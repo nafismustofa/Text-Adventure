@@ -1,7 +1,7 @@
-from map import *
+from game import *
 
 def main():
-    Map().display_map()
+    Game().game()
 
 if __name__ == "__main__":
     main()

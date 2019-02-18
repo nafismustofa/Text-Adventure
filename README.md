@@ -1,9 +1,9 @@
 # Text-Adventure
 This is a player movement example with pygames
 
-#Dependencies
+# Dependencies
 Pygame v1.9.4
 
-#Installation
+# Installation
 Use `pip install pygame` to install dependencies.
 Run `src/main.py` to play the game.

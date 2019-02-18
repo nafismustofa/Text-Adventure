@@ -47,16 +47,16 @@ class Game:
                 #Quit Event
                 if event.type == pygame.QUIT:
                     self.__is_running = False
-                #Input Event
-                if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_UP or event.key == pygame.K_w:
-                        self.__player_y -= 30
-                    if event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                        self.__player_y += 30
-                    if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-                        self.__player_x += 30
-                    if event.key == pygame.K_LEFT or event.key == pygame.K_a:
-                        self.__player_x -= 30
+
+            key_state = pygame.key.get_pressed()
+            if key_state[pygame.K_UP] or key_state[pygame.K_w]:
+                self.__player_y -= 2
+            if key_state[pygame.K_DOWN] or key_state[pygame.K_s]:
+                self.__player_y += 2
+            if key_state[pygame.K_RIGHT] or key_state[pygame.K_d]:
+                self.__player_x += 2
+            if key_state[pygame.K_LEFT] or key_state[pygame.K_a]:
+                self.__player_x -= 2
             
             #Background Color
             self.__game_display.fill(self.__color_black)

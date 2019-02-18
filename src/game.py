@@ -47,7 +47,6 @@ class Game:
                 #Quit Event
                 if event.type == pygame.QUIT:
                     self.__is_running = False
-                
                 #Input Event
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_UP or event.key == pygame.K_w:

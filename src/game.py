@@ -47,7 +47,8 @@ class Game:
                 #Quit Event
                 if event.type == pygame.QUIT:
                     self.__is_running = False
-
+            
+            #Input Event
             key_state = pygame.key.get_pressed()
             if key_state[pygame.K_UP] or key_state[pygame.K_w]:
                 self.__player_y -= 2

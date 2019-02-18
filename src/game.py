@@ -8,7 +8,8 @@ class Game:
     __color_red = (255 , 0 , 0)
     __player_x = 45
     __player_y = 45
-
+    __player_speed = 2
+    
     #Pygame Initialization
     pygame.init()
 
@@ -51,13 +52,13 @@ class Game:
             #Input Event
             key_state = pygame.key.get_pressed()
             if key_state[pygame.K_UP] or key_state[pygame.K_w]:
-                self.__player_y -= 2
+                self.__player_y -= self.__player_speed
             if key_state[pygame.K_DOWN] or key_state[pygame.K_s]:
-                self.__player_y += 2
+                self.__player_y += self.__player_speed
             if key_state[pygame.K_RIGHT] or key_state[pygame.K_d]:
-                self.__player_x += 2
+                self.__player_x += self.__player_speed
             if key_state[pygame.K_LEFT] or key_state[pygame.K_a]:
-                self.__player_x -= 2
+                self.__player_x -= self.__player_speed
             
             #Background Color
             self.__game_display.fill(self.__color_black)
